@@ -20,23 +20,28 @@ namespace Zadanie1
             }
             return 0;
         }
+
         public void Delete(int D_index)
         {
             string[] newSTR = new string[STR.Length];
 
-            for(int i=0; i<D_index; ++i)
+            for(int i=0; i<D_index; i++)
                 newSTR[i] = STR[i];
 
-            for (int i = D_index+1; i < STR.Length; ++i)
-                newSTR[i-1] = STR[i];
+            for (int i = D_index + 1; i < STR.Length; i++)
+            {
+                newSTR[i - 1] = STR[i];
+            }
             temp--;
 
             STR = newSTR;
         }
+
+
         public int Search( string ss)
         {
             int RightIndex =-1;
-            for(int i=0; i<STR.Length; ++i)
+            for(int i=0; i<STR.Length; i++)
             {
                 if (STR[i] == ss)
                 {
@@ -50,19 +55,19 @@ namespace Zadanie1
         }
         public void Update (string ss, int index)
         {
-            string[] newSTR = new string[STR.Length];
-            for (int i = 0; i < index; ++i)
-                newSTR[i] = STR[i];
-            for (int i = index + 1; i < STR.Length; ++i)
-                newSTR[i] = STR[i];
-            newSTR[index] = ss;
-            STR = newSTR;
+            if(index<0 && index > 100)
+            {
+                return Console.WriteLine(" Нет такого элемента");
+            }
+            STR[index] = ss;
         }
+
         public string GetAt(int i)
         {
 
             return STR[i];
         }
+
         public static void Main(string[] argc)
         {
             StringList obj1 = new StringList();
