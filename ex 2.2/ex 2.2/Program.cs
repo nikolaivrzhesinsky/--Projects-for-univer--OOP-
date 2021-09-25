@@ -49,6 +49,11 @@ namespace ex_2._2
                    isNegative == number.isNegative;
         }
 
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(array, isNegative);
+        }
+
         public static bool operator == (Big_Number obj1, Big_Number obj2)
         {
             if (obj1.isNegative != obj2.isNegative)
@@ -81,10 +86,79 @@ namespace ex_2._2
             }
             return true;
         }
-       
 
+        private Big_Number(uint[] array, bool isNegative)   //используем его закрытым для смены знака числа
+        {
+            this.array = array;
+            this.isNegative = isNegative;
+        }
 
+        public static Big_Number operator -(Big_Number obj)
+        {
+            return new Big_Number(obj.array, !(obj.isNegative));
+        }
 
+        public static Big_Number operator +(Big_Number obj1, Big_Number obj2)
+        {
+            int length = obj1.array.Length > obj2.array.Length ? obj1.array.Length : obj2.array.Length;
+            uint[] res = new uint[length + 1];  //результирующий массив
+            uint c = 1;
+            for(int i = 0; i < move; i++)
+            {
+                c *= 10;
+            }
+            bool adding = (obj1.isNegative == obj2.isNegative);
+            for(int i = 0; i < res.Length; i++)
+            {
+                res[i] = 0;
+            }
+            for(int i = 0; i < res.Length; i++)
+            {
+                if (obj1.array.Length < i)
+                {
+                    res[i] += obj1.array[i];
+                }
+                if (obj2.array.Length < i)
+                {
+                    if (adding)
+                    {
+                        if (res[i] + obj2.array[i] < c) res[i] += obj2.array[i];
+                        else
+                        {
+                            res[i] += obj2.array[i];
+                            res[i] -= c;
+                            res[i + 1]++;
+                        }
+                    }
+                    else if (res[i] > obj2.array[i])
+                        res[i] -= obj2.array[i];
+                    else
+                    {
+                        res[i] += c;
+                        res[i] -= obj2.array[i];
+                        res[i + 1]--;
+                    }
+
+                }
+                
+            }
+            bool neg = obj1.isNegative;
+            if (res[length] < 0)
+            {
+                foreach (int x in res)
+                {
+                    x = c - 1 - x;
+                }
+                res[length] = 0;
+                neg = !neg;
+            }
+            return new Big_Number(res, neg);
+        }
+
+        public static Big_Number operator -(Big_Number obj1, Big_Number obj2)
+        {
+            return obj1 + (-obj2);
+        }
 
 
 
