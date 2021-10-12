@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\ex 4.3\\ex 4.3\\ex 4.3.csproj": {}
+    "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\ex 4.3\\ex 4.3\\ex 4.3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\ex 4.3\\ex 4.3\\ex 4.3.csproj": {
+    "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\ex 4.3\\ex 4.3\\ex 4.3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\ex 4.3\\ex 4.3\\ex 4.3.csproj",
+        "projectUniqueName": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\ex 4.3\\ex 4.3\\ex 4.3.csproj",
         "projectName": "ex 4.3",
-        "projectPath": "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\ex 4.3\\ex 4.3\\ex 4.3.csproj",
-        "packagesPath": "C:\\Users\\абв\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\ex 4.3\\ex 4.3\\obj\\",
+        "projectPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\ex 4.3\\ex 4.3\\ex 4.3.csproj",
+        "packagesPath": "C:\\Users\\HYPERPC\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\ex 4.3\\ex 4.3\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\абв\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HYPERPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
