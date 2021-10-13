@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\ex 4.3\\ex 4.3\\ex 4.3.csproj",
-      "projectName": "ex 4.3",
-      "projectPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\ex 4.3\\ex 4.3\\ex 4.3.csproj",
+      "projectUniqueName": "C:\\Users\\HYPERPC\\source\\repos\\Zadanie №5_4\\Zadanie №5_4\\Zadanie №5_4.csproj",
+      "projectName": "Zadanie №5_4",
+      "projectPath": "C:\\Users\\HYPERPC\\source\\repos\\Zadanie №5_4\\Zadanie №5_4\\Zadanie №5_4.csproj",
       "packagesPath": "C:\\Users\\HYPERPC\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\ex 4.3\\ex 4.3\\obj\\",
+      "outputPath": "C:\\Users\\HYPERPC\\source\\repos\\Zadanie №5_4\\Zadanie №5_4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HYPERPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
