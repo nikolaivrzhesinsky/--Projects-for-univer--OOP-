@@ -1,0 +1,13 @@
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\bin\Debug\netcoreapp3.1\Lab.tesr.exe
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\bin\Debug\netcoreapp3.1\Lab.tesr.deps.json
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\bin\Debug\netcoreapp3.1\Lab.tesr.runtimeconfig.json
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\bin\Debug\netcoreapp3.1\Lab.tesr.runtimeconfig.dev.json
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\bin\Debug\netcoreapp3.1\Lab.tesr.dll
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\bin\Debug\netcoreapp3.1\Lab.tesr.pdb
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.csprojAssemblyReference.cache
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.AssemblyInfoInputs.cache
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.AssemblyInfo.cs
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.csproj.CoreCompileInputs.cache
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.dll
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.pdb
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.genruntimeconfig.cache
