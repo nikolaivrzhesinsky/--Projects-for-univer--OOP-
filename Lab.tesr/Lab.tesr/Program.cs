@@ -73,7 +73,20 @@ namespace Lab.tesr
                         }
                     case 2:
                         {
-                            
+                            Console.WriteLine("введите номер записи: ");
+                            int num = int.Parse(Console.ReadLine());
+                            people[num].Print();
+                            break;
+                        }
+                    case 0:
+                        {
+                            Console.WriteLine("Вы действительно хотите выйти?\n");
+                            Console.WriteLine("1-yes, 0-no");
+                            int signal = int.Parse(Console.ReadLine());
+                            if (signal == 1)
+                            {
+                                endPoint = false;
+                            }
                             break;
                         }
                     default:
