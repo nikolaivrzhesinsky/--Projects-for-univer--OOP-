@@ -48,10 +48,7 @@ namespace Lab.tesr
             }
         }
 
-        public override string ToString()
-        {
-            return ($"{date} {room} {detector} {signal}");
-        }
+       
     }
 
 
@@ -79,7 +76,7 @@ namespace Lab.tesr
         
         static void Main(string[] args)
         {
-            String path = @"C:\Users\HYPERPC\Desktop\smarthouse.txt";
+            String path = @"C:\Users\абв\Documents\GitHub\--Projects-for-univer\test2.txt";
             List<smartHouse> detectors = new List<smartHouse>();
             FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             int sizeList;
@@ -129,12 +126,73 @@ namespace Lab.tesr
                             string[] lines = File.ReadAllLines(path);
                             Console.WriteLine("введите номер записи: ");
                             int num = int.Parse(Console.ReadLine());
-                            string[] temp = lines[num - 1].Split(' ');
+                            string[] temp = lines[num - 1].Split();
                             for (int i = 0; i < temp.Length; i++)
                             {
                                 Console.Write(temp[i] + " ");
                             }
                             Console.WriteLine("\n");
+                            break;
+                        }
+                    case 3:
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Какую строку вы хотите изменить");
+                            int num = int.Parse(Console.ReadLine());
+                            bool setCheck = true;
+                            while (setCheck)
+                            {
+                                Console.WriteLine("Введите номер команды");
+                                Console.WriteLine("1- смениить дату");
+                                Console.WriteLine("2- сменить комнату");
+                                Console.WriteLine("3- сменить назначение датчика");
+                                Console.WriteLine("4- сменить значение");
+                                Console.WriteLine("0- Exit");
+                                int comand_on = int.Parse(Console.ReadLine());
+                                switch (comand_on)
+                                {
+                                    case 1:
+                                        {
+                                            detectors[num-1].date = Convert.ToDateTime(Console.ReadLine());
+                                            break;
+                                        }
+                                    case 2:
+                                        {
+                                            detectors[num-1].room = Console.ReadLine();
+                                            break;
+                                        }
+                                    case 3:
+                                        {
+                                            detectors[num-1].detector = int.Parse(Console.ReadLine());
+                                            break;
+                                        }
+                                    case 4:
+                                        {
+                                            detectors[num-1].signal = double.Parse(Console.ReadLine());
+                                            break;
+                                        }
+                                    case 0:
+                                        {
+                                            Console.Clear();
+                                            Console.WriteLine("Вы действительно хотите выйти?\n");
+                                            Console.WriteLine("1-yes, 0-no");
+                                            int signal = int.Parse(Console.ReadLine());
+                                            if (signal == 1)
+                                            {
+                                                setCheck= false;
+                                            }
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Console.WriteLine("Ошибка при вводе названия команды, повторите");
+                                            break;
+                                        }
+                                }
+                            }
+                            Update(path, sizeList, detectors);
+                            Console.WriteLine("\nБаза данных была обновлена!\n");
+
                             break;
                         }
                     case 4:
@@ -156,9 +214,20 @@ namespace Lab.tesr
                     case 5:
                         {
                             Console.Clear();
-                            detectors.Add(new smartHouse());
-                            Console.WriteLine("Добавление днных с клавиатуры. Введите параметры");
-                            Console.WriteLine("Введите дату в формате (2009-05-01T07:54:59)");
+                            
+                            Console.WriteLine("Добавление данных с клавиатуры. Введите параметры");
+                            Console.WriteLine("Введите дату в формате (ShortDate)");
+                            DateTime dateTime = Convert.ToDateTime(Console.ReadLine());
+                            Console.WriteLine("Введите название команиты (без пробела)");
+                            string place = Console.ReadLine();
+                            Console.WriteLine("Введите тип датчика: 1-температуры, 2- влажность, 3- давление ");
+                            int detNum = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Установите числовое значение вычисления");
+                            double sigDet = double.Parse(Console.ReadLine());
+                            detectors.Add(new smartHouse(dateTime,place,detNum,sigDet));
+                            sizeList++;
+                            Update(path, sizeList, detectors);
+                            Console.WriteLine("\nБаза данных была обновлена!\n");
 
                             break;
                         }
