@@ -11,3 +11,17 @@ C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\obj\Deb
 C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.dll
 C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.pdb
 C:\Users\абв\Documents\GitHub\--Projects-for-univer\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.genruntimeconfig.cache
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\bin\Debug\netcoreapp3.1\Lab.tesr.exe
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\bin\Debug\netcoreapp3.1\Lab.tesr.deps.json
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\bin\Debug\netcoreapp3.1\Lab.tesr.runtimeconfig.json
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\bin\Debug\netcoreapp3.1\Lab.tesr.runtimeconfig.dev.json
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\bin\Debug\netcoreapp3.1\Lab.tesr.dll
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\bin\Debug\netcoreapp3.1\Lab.tesr.pdb
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.csproj.AssemblyReference.cache
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.AssemblyInfoInputs.cache
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.AssemblyInfo.cs
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.csproj.CoreCompileInputs.cache
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.dll
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.pdb
+D:\GitHub Repos\--Projects-for-univer--OOP-\Lab.tesr\Lab.tesr\obj\Debug\netcoreapp3.1\Lab.tesr.genruntimeconfig.cache

@@ -12,8 +12,8 @@ namespace Lab.tesr
         public string room { get; set; }   // комната
         public int detector { get; set; }  // определяет назначение датчика
         public double signal { get; set; } // показатель, который имеет датчик
-       
-        
+
+
         public smartHouse() { }
 
         public smartHouse(DateTime date, string room, int detector, double signal)
@@ -28,23 +28,23 @@ namespace Lab.tesr
             switch (detector)
             {
                 case 1:
-                {
-                        
+                    {
+
                         Console.WriteLine($"Date- {date} Room- {room} Темпаратура- {signal} градусов");
                         break;
-                }
+                    }
                 case 2:
                     {
-                        Console.WriteLine($"Date- {date} Room- {room} Влажность- {signal}");
+                        Console.WriteLine($"Date- {date} Room- {room} Влажность- {signal}%");
                         break;
                     }
 
                 case 3:
                     {
-                        Console.WriteLine($"Date- {date} Room-{room} Давление- {signal}");
+                        Console.WriteLine($"Date- {date} Room- {room} Давление- {signal} паскаль");
                         break;
                     }
-                
+
             }
         }
 
@@ -57,9 +57,29 @@ namespace Lab.tesr
 
     class Program
     {
+        static void Update(string path, int sizeList, List<smartHouse> detectors)
+        {
+            StreamWriter sw = new StreamWriter(path);
+            for (int i=0; i < sizeList; i++)
+            {
+                string date = detectors[i].date.ToShortDateString();
+                string room = detectors[i].room.ToString();
+                string detector = detectors[i].detector.ToString();
+                string signal = detectors[i].signal.ToString();
+                sw.WriteLine($"{date} {room} {detector} {signal}");
+            }
+            sw.Close();
+            
+        }
+        static void Delete(int lineNumber, List<smartHouse> detectors)
+        {
+            detectors.RemoveAt(lineNumber);
+           
+        }
+        
         static void Main(string[] args)
         {
-            String path = @"C:\Users\абв\Documents\GitHub\--Projects-for-univer\test2.txt";
+            String path = @"C:\Users\HYPERPC\Desktop\smarthouse.txt";
             List<smartHouse> detectors = new List<smartHouse>();
             FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             int sizeList;
@@ -96,7 +116,7 @@ namespace Lab.tesr
                     case 1:
                         {
                             Console.Clear();
-                            for (int i = 0; i <sizeList ; i++)
+                            for (int i = 0; i < sizeList; i++)
                             {
                                 detectors[i].Print();
                             }
@@ -109,12 +129,28 @@ namespace Lab.tesr
                             string[] lines = File.ReadAllLines(path);
                             Console.WriteLine("введите номер записи: ");
                             int num = int.Parse(Console.ReadLine());
-                            string[] temp = lines[num-1].Split(' ');
-                           for(int i = 0;i <temp.Length; i++)
+                            string[] temp = lines[num - 1].Split(' ');
+                            for (int i = 0; i < temp.Length; i++)
                             {
-                                Console.Write(temp[i]+ " ");
+                                Console.Write(temp[i] + " ");
                             }
                             Console.WriteLine("\n");
+                            break;
+                        }
+                    case 4:
+                        {
+                            Console.Clear();
+                            string[] lines = File.ReadAllLines(path);
+                            Console.WriteLine("Введите строчку для удаления: ");
+                            int num = int.Parse(Console.ReadLine());
+                            sizeList--;
+                            Delete(num-1, detectors);
+                            Update(path, sizeList, detectors);
+                            Console.WriteLine("\nБаза данных была обновлена!\n");
+                            for(int i=0; i< sizeList;i++)
+                            {
+                                detectors[i].Print();
+                            }
                             break;
                         }
                     case 5:
@@ -123,7 +159,7 @@ namespace Lab.tesr
                             detectors.Add(new smartHouse());
                             Console.WriteLine("Добавление днных с клавиатуры. Введите параметры");
                             Console.WriteLine("Введите дату в формате (2009-05-01T07:54:59)");
-                            
+
                             break;
                         }
 
@@ -151,4 +187,3 @@ namespace Lab.tesr
 
     }
 }
-
