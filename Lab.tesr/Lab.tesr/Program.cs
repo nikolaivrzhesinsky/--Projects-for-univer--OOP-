@@ -54,6 +54,27 @@ namespace Lab.tesr
 
     class Program
     {
+        
+        static void Sort(List<smartHouse> array,int size)
+        {
+            
+            for (int i = 0; i < size-1; i++)
+            {
+                for(int j = i + 1; j < size; j++)
+                {
+                    int compareDate = DateTime.Compare(array[i].date, array[j].date);
+                    if(compareDate>0)
+                    {
+                        smartHouse temp = new smartHouse();
+                        temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
+                    }
+                    
+                }
+            }
+        }
+
         static void Update(string path, int sizeList, List<smartHouse> detectors)
         {
             StreamWriter sw = new StreamWriter(path);
@@ -102,6 +123,7 @@ namespace Lab.tesr
                 Console.WriteLine("3- Редактирование записи\n");
                 Console.WriteLine("4- Удаление записи\n");
                 Console.WriteLine("5- Добавление записи\n");
+                Console.WriteLine("6- Вычислить среднее за выбранный период\n");
                 Console.WriteLine("0- Выход из меню\n"); //+
                 Console.WriteLine("\n");
                 Console.WriteLine("Введите номер операции для выполнения: ");
@@ -229,6 +251,13 @@ namespace Lab.tesr
                             Update(path, sizeList, detectors);
                             Console.WriteLine("\nБаза данных была обновлена!\n");
 
+                            break;
+                        }
+                    case 6:
+                        {
+                            Sort(detectors, sizeList);
+                            Update(path, sizeList, detectors);
+                            Console.WriteLine("\nБаза данных была обновлена!\n");
                             break;
                         }
 
