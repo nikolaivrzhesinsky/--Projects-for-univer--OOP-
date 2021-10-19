@@ -13,9 +13,7 @@ namespace Lab.tesr
         public int detector { get; set; }  // определяет назначение датчика
         public double signal { get; set; } // показатель, который имеет датчик
 
-
         public smartHouse() { }
-
         public smartHouse(DateTime date, string room, int detector, double signal)
         {
             this.date = date;
@@ -94,10 +92,72 @@ namespace Lab.tesr
             detectors.RemoveAt(lineNumber);
            
         }
-        
+        static void Peaks(DateTime time1, DateTime time2, string room, List<smartHouse> detectors)
+        {
+            double temperature_peak = -999999999;
+            double pressure_peak = -999999999;
+            double moisture_peak = -999999999;
+            
+            DateTime exacttime = time1;
+            for(int i=0; i< detectors.Count; i++)
+            {
+                
+                if(exacttime == detectors[i].date && room == detectors[i].room)
+                {
+                    switch(detectors[i].detector)
+                    {
+                        case 1:
+                            {
+                                if (detectors[i].signal >= temperature_peak)
+                                    temperature_peak = detectors[i].signal;
+                                break;
+                            }
+                        case 2:
+                            {
+                                if (detectors[i].signal >= moisture_peak)
+                                    moisture_peak = detectors[i].signal;
+                                break;
+                            }
+                        case 3:
+                            {
+                                if (detectors[i].signal >= pressure_peak)
+                                    pressure_peak = detectors[i].signal;
+                                break;
+                            }
+                    }
+                }
+                if((detectors[i].date == time2 && room == detectors[i].room) || (i == detectors.Count - 1))
+                {
+                    switch (detectors[i].detector)
+                    {
+                        case 1:
+                            {
+                                if (detectors[i].signal >= temperature_peak)
+                                    temperature_peak = detectors[i].signal;
+                                break;
+                            }
+                        case 2:
+                            {
+                                if (detectors[i].signal >= moisture_peak)
+                                    moisture_peak = detectors[i].signal;
+                                break;
+                            }
+                        case 3:
+                            {
+                                if (detectors[i].signal >= pressure_peak)
+                                    pressure_peak = detectors[i].signal;
+                                break;
+                            }
+                    }
+                    break;
+                }
+            }
+            Console.WriteLine($"Пик по температуре - {temperature_peak},\nПик по влажности - {moisture_peak},\nПик по давлению - {pressure_peak}\n");
+
+        }
         static void Main(string[] args)
         {
-            String path = @"C:\Users\абв\Documents\GitHub\--Projects-for-univer\test2.txt";
+            String path = @"C:\Users\HYPERPC\Desktop\smarthouse.txt";
             List<smartHouse> detectors = new List<smartHouse>();
             FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             int sizeList;
@@ -124,6 +184,7 @@ namespace Lab.tesr
                 Console.WriteLine("4- Удаление записи\n");
                 Console.WriteLine("5- Добавление записи\n");
                 Console.WriteLine("6- Вычислить среднее за выбранный период\n");
+                Console.WriteLine("7- Вычислить пики за указанный период\n");
                 Console.WriteLine("0- Выход из меню\n"); //+
                 Console.WriteLine("\n");
                 Console.WriteLine("Введите номер операции для выполнения: ");
@@ -175,22 +236,22 @@ namespace Lab.tesr
                                 {
                                     case 1:
                                         {
-                                            detectors[num-1].date = Convert.ToDateTime(Console.ReadLine());
+                                            detectors[num - 1].date = Convert.ToDateTime(Console.ReadLine());
                                             break;
                                         }
                                     case 2:
                                         {
-                                            detectors[num-1].room = Console.ReadLine();
+                                            detectors[num - 1].room = Console.ReadLine();
                                             break;
                                         }
                                     case 3:
                                         {
-                                            detectors[num-1].detector = int.Parse(Console.ReadLine());
+                                            detectors[num - 1].detector = int.Parse(Console.ReadLine());
                                             break;
                                         }
                                     case 4:
                                         {
-                                            detectors[num-1].signal = double.Parse(Console.ReadLine());
+                                            detectors[num - 1].signal = double.Parse(Console.ReadLine());
                                             break;
                                         }
                                     case 0:
@@ -201,7 +262,7 @@ namespace Lab.tesr
                                             int signal = int.Parse(Console.ReadLine());
                                             if (signal == 1)
                                             {
-                                                setCheck= false;
+                                                setCheck = false;
                                             }
                                             break;
                                         }
@@ -212,6 +273,7 @@ namespace Lab.tesr
                                         }
                                 }
                             }
+                            Sort(detectors, sizeList);
                             Update(path, sizeList, detectors);
                             Console.WriteLine("\nБаза данных была обновлена!\n");
 
@@ -224,10 +286,10 @@ namespace Lab.tesr
                             Console.WriteLine("Введите строчку для удаления: ");
                             int num = int.Parse(Console.ReadLine());
                             sizeList--;
-                            Delete(num-1, detectors);
+                            Delete(num - 1, detectors);
                             Update(path, sizeList, detectors);
                             Console.WriteLine("\nБаза данных была обновлена!\n");
-                            for(int i=0; i< sizeList;i++)
+                            for (int i = 0; i < sizeList; i++)
                             {
                                 detectors[i].Print();
                             }
@@ -236,7 +298,7 @@ namespace Lab.tesr
                     case 5:
                         {
                             Console.Clear();
-                            
+
                             Console.WriteLine("Добавление данных с клавиатуры. Введите параметры");
                             Console.WriteLine("Введите дату в формате (ShortDate)");
                             DateTime dateTime = Convert.ToDateTime(Console.ReadLine());
@@ -246,8 +308,9 @@ namespace Lab.tesr
                             int detNum = int.Parse(Console.ReadLine());
                             Console.WriteLine("Установите числовое значение вычисления");
                             double sigDet = double.Parse(Console.ReadLine());
-                            detectors.Add(new smartHouse(dateTime,place,detNum,sigDet));
+                            detectors.Add(new smartHouse(dateTime, place, detNum, sigDet));
                             sizeList++;
+                            Sort(detectors, sizeList);
                             Update(path, sizeList, detectors);
                             Console.WriteLine("\nБаза данных была обновлена!\n");
 
@@ -255,11 +318,28 @@ namespace Lab.tesr
                         }
                     case 6:
                         {
-                            Sort(detectors, sizeList);
-                            Update(path, sizeList, detectors);
-                            Console.WriteLine("\nБаза данных была обновлена!\n");
+                            Console.Clear();
+
+
                             break;
                         }
+                    case 7:
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Введите начальную дату: ");
+                            DateTime dateTimeStart = Convert.ToDateTime(Console.ReadLine());
+                            Console.WriteLine("Введите конечную дату дату: ");
+                            DateTime dateTimeEnd = Convert.ToDateTime(Console.ReadLine());
+                            Console.WriteLine("Введите название комнаты: ");
+                            string exactRoom = Console.ReadLine();
+                            Peaks(dateTimeStart, dateTimeEnd, exactRoom, detectors);
+
+
+
+                            break;
+                        }
+                
+                
 
                     case 0:
                         {
