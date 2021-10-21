@@ -97,62 +97,52 @@ namespace Lab.tesr
             double temperature_peak = -999999999;
             double pressure_peak = -999999999;
             double moisture_peak = -999999999;
+
             
+
             DateTime exacttime = time1;
             for(int i=0; i< detectors.Count; i++)
             {
                 
-                if(exacttime == detectors[i].date && room == detectors[i].room)
+                if(exacttime <= detectors[i].date && room == detectors[i].room)
                 {
-                    switch(detectors[i].detector)
+                    while(detectors[i].date <= time2)
                     {
-                        case 1:
+                        if (detectors[i].room == room)
+                        {
+                            switch (detectors[i].detector)
                             {
-                                if (detectors[i].signal >= temperature_peak)
-                                    temperature_peak = detectors[i].signal;
-                                break;
+                                case 1:
+                                    {
+                                        if (detectors[i].signal >= temperature_peak)
+                                            temperature_peak = detectors[i].signal;
+                                        break;
+                                    }
+                                case 2:
+                                    {
+                                        if (detectors[i].signal >= moisture_peak)
+                                            moisture_peak = detectors[i].signal;
+
+                                        break;
+                                    }
+                                case 3:
+                                    {
+                                        if (detectors[i].signal >= pressure_peak)
+                                            pressure_peak = detectors[i].signal;
+                                        break;
+                                    }
                             }
-                        case 2:
-                            {
-                                if (detectors[i].signal >= moisture_peak)
-                                    moisture_peak = detectors[i].signal;
-                                break;
-                            }
-                        case 3:
-                            {
-                                if (detectors[i].signal >= pressure_peak)
-                                    pressure_peak = detectors[i].signal;
-                                break;
-                            }
+                        }
+                        i++;
+                        if (i == detectors.Count)
+                            break;
                     }
-                }
-                if((detectors[i].date == time2 && room == detectors[i].room) || (i == detectors.Count - 1))
-                {
-                    switch (detectors[i].detector)
-                    {
-                        case 1:
-                            {
-                                if (detectors[i].signal >= temperature_peak)
-                                    temperature_peak = detectors[i].signal;
-                                break;
-                            }
-                        case 2:
-                            {
-                                if (detectors[i].signal >= moisture_peak)
-                                    moisture_peak = detectors[i].signal;
-                                break;
-                            }
-                        case 3:
-                            {
-                                if (detectors[i].signal >= pressure_peak)
-                                    pressure_peak = detectors[i].signal;
-                                break;
-                            }
-                    }
-                    break;
                 }
             }
-            Console.WriteLine($"Пик по температуре - {temperature_peak},\nПик по влажности - {moisture_peak},\nПик по давлению - {pressure_peak}\n");
+            if(temperature_peak== -999999999 && pressure_peak== -999999999 && moisture_peak == -999999999)
+                Console.WriteLine("Нету записей датчиков о данной команте за этот промежуток времени\n");
+            else
+                Console.WriteLine($"Пик по температуре - {temperature_peak},\nПик по влажности - {moisture_peak},\nПик по давлению - {pressure_peak}\n");
 
         }
         static void Main(string[] args)
@@ -330,6 +320,8 @@ namespace Lab.tesr
                             DateTime dateTimeStart = Convert.ToDateTime(Console.ReadLine());
                             Console.WriteLine("Введите конечную дату дату: ");
                             DateTime dateTimeEnd = Convert.ToDateTime(Console.ReadLine());
+                            if (dateTimeEnd > detectors[detectors.Count - 1].date)
+                                dateTimeEnd = detectors[detectors.Count - 1].date;
                             Console.WriteLine("Введите название комнаты: ");
                             string exactRoom = Console.ReadLine();
                             Peaks(dateTimeStart, dateTimeEnd, exactRoom, detectors);
