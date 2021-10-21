@@ -85,6 +85,7 @@ namespace Lab.tesr
                 sw.WriteLine($"{date} {room} {detector} {signal}");
             }
             sw.Close();
+            Sort(detectors, sizeList);
             
         }
         static void Delete(int lineNumber, List<smartHouse> detectors)
@@ -145,9 +146,130 @@ namespace Lab.tesr
                 Console.WriteLine($"Пик по температуре - {temperature_peak},\nПик по влажности - {moisture_peak},\nПик по давлению - {pressure_peak}\n");
 
         }
+
+        private static void printAverage(double averageTemp, double averageWet, double averagePressure, int counterT, int counterW, int counterP)
+        {
+            if (counterT == 0)
+            {
+                Console.Write("Данных по температуре нет |");
+            }
+            else Console.Write($" Температура {averageTemp}");
+
+            if (counterW == 0)
+            {
+                Console.Write("Данных по влажности нет |");
+            }
+            else Console.Write($" Влажность {averageWet} ");
+
+            if (counterP == 0)
+            {
+                Console.Write("Данных по давлению нет |");
+            }
+            else Console.Write($" Давление {averagePressure} ");
+            Console.WriteLine("\n");
+        }
+
+        static void averageDays(List<smartHouse>detectors, int size, DateTime temp, string place )
+        {
+            double averageTemp = 0, averageWet = 0, averagePressure = 0;
+            double sumT = 0, sumW = 0, sumP = 0;
+            int counterT = 0, counterW = 0, counterP = 0;
+
+            for(int i = 0; i < size; i++)
+            {
+                if (detectors[i].date.Equals(temp) && detectors[i].room == place)
+                {
+                    if (detectors[i].detector == 1)
+                    {
+                        sumT += detectors[i].signal;
+                        counterT++;
+                    }
+                    if (detectors[i].detector == 2)
+                    {
+                        sumW += detectors[i].signal;
+                        counterW++;
+                    }
+                    if(detectors[i].detector == 3)
+                    {
+                        sumP += detectors[i].signal;
+                        counterP++;
+                    }
+                }
+            }
+            averageTemp = sumT / counterT;
+            averageWet = sumW / counterW;
+            averagePressure = sumP / counterP;
+            printAverage(averageTemp, averageWet, averagePressure, counterT, counterW, counterP);
+        }
+        static void averageMonth(List<smartHouse> detectors, int size, DateTime temp, string place)
+        {
+            double averageTemp = 0, averageWet = 0, averagePressure = 0;
+            double sumT = 0, sumW = 0, sumP = 0;
+            int counterT = 0, counterW = 0, counterP = 0;
+
+            for (int i = 0; i < size; i++)
+            {
+                if (detectors[i].date.Month.Equals(temp.Month) && detectors[i].date.Year.Equals(temp.Year) && detectors[i].room == place)
+                {
+                    if (detectors[i].detector == 1)
+                    {
+                        sumT += detectors[i].signal;
+                        counterT++;
+                    }
+                    if (detectors[i].detector == 2)
+                    {
+                        sumW += detectors[i].signal;
+                        counterW++;
+                    }
+                    if (detectors[i].detector == 3)
+                    {
+                        sumP += detectors[i].signal;
+                        counterP++;
+                    }
+                }
+            }
+            averageTemp = sumT / counterT;
+            averageWet = sumW / counterW;
+            averagePressure = sumP / counterP;
+            printAverage(averageTemp, averageWet, averagePressure, counterT, counterW, counterP);
+        }
+
+        static void averageYear(List<smartHouse> detectors, int size, DateTime temp, string place)
+        {
+            double averageTemp = 0, averageWet = 0, averagePressure = 0;
+            double sumT = 0, sumW = 0, sumP = 0;
+            int counterT = 0, counterW = 0, counterP = 0;
+
+            for (int i = 0; i < size; i++)
+            {
+                if ( detectors[i].date.Year.Equals(temp.Year) && detectors[i].room == place)
+                {
+                    if (detectors[i].detector == 1)
+                    {
+                        sumT += detectors[i].signal;
+                        counterT++;
+                    }
+                    if (detectors[i].detector == 2)
+                    {
+                        sumW += detectors[i].signal;
+                        counterW++;
+                    }
+                    if (detectors[i].detector == 3)
+                    {
+                        sumP += detectors[i].signal;
+                        counterP++;
+                    }
+                }
+            }
+            averageTemp = sumT / counterT;
+            averageWet = sumW / counterW;
+            averagePressure = sumP / counterP;
+            printAverage(averageTemp, averageWet, averagePressure, counterT, counterW, counterP);
+        }
+
         static void Main(string[] args)
         {
-            String path = @"C:\Users\HYPERPC\Desktop\smarthouse.txt";
+            String path = @"C:\Users\абв\Documents\GitHub\--Projects-for-univer\test2.txt";
             List<smartHouse> detectors = new List<smartHouse>();
             FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             int sizeList;
@@ -309,6 +431,58 @@ namespace Lab.tesr
                     case 6:
                         {
                             Console.Clear();
+                            Console.WriteLine("1- Средние значения по дням\n");
+                            Console.WriteLine("2- Среднее значение по месяцам\n");
+                            Console.WriteLine("3- Среднее значение по годам \n");
+                            Console.WriteLine("Выберите подпункт, введите нужное число\n");
+                            int checkAver=int.Parse(Console.ReadLine());
+                            switch (checkAver)
+                            {
+                                case 1:
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine("Введите дату(пример: 12.10.1999)\n");
+                                        DateTime dateValue = Convert.ToDateTime(Console.ReadLine());
+                                        Console.WriteLine("Введите название комнаты\n");
+                                        string place = Console.ReadLine();
+                                        Console.Clear();
+                                        Console.WriteLine(dateValue);
+                                        averageDays(detectors, sizeList, dateValue, place);
+                                        break;
+                                    }
+                                case 2:
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine("Введите месяц и год (с новой строки в числовом представлении)\n");
+                                        Console.WriteLine("Месяц ");
+                                        string month = Console.ReadLine();
+                                        Console.WriteLine("\nГод ");
+                                        string year = Console.ReadLine();
+                                        Console.WriteLine("Введите название комнаты\n");
+                                        string place = Console.ReadLine();
+                                        string dateDtring = "1." + month + "." + year;
+                                        DateTime dareValue = Convert.ToDateTime(dateDtring);
+                                        averageMonth(detectors, sizeList, dareValue,place);
+                                        break;
+                                    }
+                                case 3:
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine("Введите год в числовом представлении\n");
+                                        string year = Console.ReadLine();
+                                        Console.WriteLine("Введите название комнаты\n");
+                                        string place = Console.ReadLine();
+                                        string dateDtring = "1.1."+ year;
+                                        DateTime dateValue = Convert.ToDateTime(dateDtring);
+                                        averageYear(detectors, sizeList, dateValue, place);
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        Console.WriteLine("Ошибка при вводе названия команды, повторите");
+                                        break;
+                                    }
+                            }
 
 
                             break;
