@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\Lab.tesr\\Lab.tesr\\Lab.tesr.csproj",
-      "projectName": "Lab.tesr",
-      "projectPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\Lab.tesr\\Lab.tesr\\Lab.tesr.csproj",
+      "projectUniqueName": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse\\SmartHouse.csproj",
+      "projectName": "SmartHouse",
+      "projectPath": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse\\SmartHouse.csproj",
       "packagesPath": "C:\\Users\\HYPERPC\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\Lab.tesr\\Lab.tesr\\obj\\",
+      "outputPath": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HYPERPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,6 +58,9 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"

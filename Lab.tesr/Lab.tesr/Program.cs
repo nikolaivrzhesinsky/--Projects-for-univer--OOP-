@@ -269,7 +269,7 @@ namespace Lab.tesr
 
         static void Main(string[] args)
         {
-            String path = @"C:\Users\абв\Documents\GitHub\--Projects-for-univer\test2.txt";
+            String path = @"C:\Users\HYPERPC\Desktop\smarthouse.txt";
             List<smartHouse> detectors = new List<smartHouse>();
             FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             int sizeList;

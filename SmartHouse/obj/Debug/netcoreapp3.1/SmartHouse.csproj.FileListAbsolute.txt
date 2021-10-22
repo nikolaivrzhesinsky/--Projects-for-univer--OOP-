@@ -1,0 +1,16 @@
+C:\Users\HYPERPC\source\repos\SmartHouse\obj\Debug\netcoreapp3.1\SmartHouse.csproj.AssemblyReference.cache
+C:\Users\HYPERPC\source\repos\SmartHouse\obj\Debug\netcoreapp3.1\SmartHouse.csproj.GenerateResource.cache
+C:\Users\HYPERPC\source\repos\SmartHouse\obj\Debug\netcoreapp3.1\SmartHouse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HYPERPC\source\repos\SmartHouse\obj\Debug\netcoreapp3.1\SmartHouse.AssemblyInfoInputs.cache
+C:\Users\HYPERPC\source\repos\SmartHouse\obj\Debug\netcoreapp3.1\SmartHouse.AssemblyInfo.cs
+C:\Users\HYPERPC\source\repos\SmartHouse\obj\Debug\netcoreapp3.1\SmartHouse.csproj.CoreCompileInputs.cache
+C:\Users\HYPERPC\source\repos\SmartHouse\bin\Debug\netcoreapp3.1\SmartHouse.exe
+C:\Users\HYPERPC\source\repos\SmartHouse\bin\Debug\netcoreapp3.1\SmartHouse.deps.json
+C:\Users\HYPERPC\source\repos\SmartHouse\bin\Debug\netcoreapp3.1\SmartHouse.runtimeconfig.json
+C:\Users\HYPERPC\source\repos\SmartHouse\bin\Debug\netcoreapp3.1\SmartHouse.runtimeconfig.dev.json
+C:\Users\HYPERPC\source\repos\SmartHouse\bin\Debug\netcoreapp3.1\SmartHouse.dll
+C:\Users\HYPERPC\source\repos\SmartHouse\bin\Debug\netcoreapp3.1\SmartHouse.pdb
+C:\Users\HYPERPC\source\repos\SmartHouse\obj\Debug\netcoreapp3.1\SmartHouse.dll
+C:\Users\HYPERPC\source\repos\SmartHouse\obj\Debug\netcoreapp3.1\SmartHouse.pdb
+C:\Users\HYPERPC\source\repos\SmartHouse\obj\Debug\netcoreapp3.1\SmartHouse.genruntimeconfig.cache
+C:\Users\HYPERPC\source\repos\SmartHouse\obj\Debug\netcoreapp3.1\SmartHouse.Form1.resources
