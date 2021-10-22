@@ -23,25 +23,28 @@ namespace Lab.tesr
         }
         public void Print()
         {
+           
             switch (detector)
             {
+                
                 case 1:
                     {
 
-                        Console.WriteLine($"Date- {date} Room- {room} Темпаратура- {signal} градусов");
+                        Console.WriteLine($" Date- {date} Room- {room} Темпаратура- {signal} градусов");
                         break;
                     }
                 case 2:
                     {
-                        Console.WriteLine($"Date- {date} Room- {room} Влажность- {signal}%");
+                        Console.WriteLine($" Date- {date} Room- {room} Влажность- {signal}%");
                         break;
                     }
 
                 case 3:
                     {
-                        Console.WriteLine($"Date- {date} Room- {room} Давление- {signal} паскаль");
+                        Console.WriteLine($" Date- {date} Room- {room} Давление- {signal} паскаль");
                         break;
                     }
+
 
             }
         }
@@ -75,6 +78,7 @@ namespace Lab.tesr
 
         static void Update(string path, int sizeList, List<smartHouse> detectors)
         {
+            Sort(detectors, sizeList);
             StreamWriter sw = new StreamWriter(path);
             for (int i=0; i < sizeList; i++)
             {
@@ -85,7 +89,7 @@ namespace Lab.tesr
                 sw.WriteLine($"{date} {room} {detector} {signal}");
             }
             sw.Close();
-            Sort(detectors, sizeList);
+           
             
         }
         static void Delete(int lineNumber, List<smartHouse> detectors)
@@ -308,11 +312,34 @@ namespace Lab.tesr
                     case 1:
                         {
                             Console.Clear();
+                            Console.WriteLine("№ Дата      Комната      Показатель          \n");
+                            int stringCounter = 0;
                             for (int i = 0; i < sizeList; i++)
                             {
+                                Console.Write(++stringCounter);
                                 detectors[i].Print();
                             }
-                            Console.WriteLine("\n");
+                            Console.WriteLine("\n");                          
+                            bool backMenu = true;
+                            while (backMenu)
+                            {
+                                Console.WriteLine("Введите 1, чтобы вернуться в меню");
+                                int back = int.Parse(Console.ReadLine());
+                                switch (back)
+                                {
+                                    case 1:
+                                        {
+                                            backMenu = false;
+                                            Console.Clear();
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Console.WriteLine("Вы ввели не единицу\n");
+                                            break;
+                                        }
+                                }
+                            }
                             break;
                         }
                     case 2:
@@ -327,11 +354,40 @@ namespace Lab.tesr
                                 Console.Write(temp[i] + " ");
                             }
                             Console.WriteLine("\n");
+                            bool backMenu = true;
+                            while (backMenu)
+                            {
+                                Console.WriteLine("Введите 1, чтобы вернуться в меню");
+                                int back = int.Parse(Console.ReadLine());
+                                switch (back)
+                                {
+                                    case 1:
+                                        {
+                                            backMenu = false;
+                                            Console.Clear();
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Console.WriteLine("Вы ввели не единицу\n");
+                                            break;
+                                        }
+                                }
+                            }
                             break;
                         }
                     case 3:
                         {
                             Console.Clear();
+                            Console.WriteLine("№ Дата      Комната      Показатель          \n");
+                            int stringCounter = 0;
+                            for (int i = 0; i < sizeList; i++)
+                            {
+                                Console.Write(++stringCounter);
+                                detectors[i].Print();
+                            }
+                            Console.WriteLine("\n");
+
                             Console.WriteLine("Какую строку вы хотите изменить");
                             int num = int.Parse(Console.ReadLine());
                             bool setCheck = true;
@@ -385,9 +441,28 @@ namespace Lab.tesr
                                         }
                                 }
                             }
-                            Sort(detectors, sizeList);
                             Update(path, sizeList, detectors);
                             Console.WriteLine("\nБаза данных была обновлена!\n");
+                            bool backMenu = true;
+                            while (backMenu)
+                            {
+                                Console.WriteLine("Введите 1, чтобы вернуться в меню");
+                                int back = int.Parse(Console.ReadLine());
+                                switch (back)
+                                {
+                                    case 1:
+                                        {
+                                            backMenu = false;
+                                            Console.Clear();
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Console.WriteLine("Вы ввели не единицу\n");
+                                            break;
+                                        }
+                                }
+                            }
 
                             break;
                         }
