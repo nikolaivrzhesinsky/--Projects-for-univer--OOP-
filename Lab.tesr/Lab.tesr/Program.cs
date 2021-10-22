@@ -23,60 +23,64 @@ namespace Lab.tesr
         }
         public void Print()
         {
+
             switch (detector)
             {
+
                 case 1:
                     {
 
-                        Console.WriteLine($"Date- {date} Room- {room} Темпаратура- {signal} градусов");
+                        Console.WriteLine($" Date- {date} Room- {room} Темпаратура- {signal} градусов");
                         break;
                     }
                 case 2:
                     {
-                        Console.WriteLine($"Date- {date} Room- {room} Влажность- {signal}%");
+                        Console.WriteLine($" Date- {date} Room- {room} Влажность- {signal}%");
                         break;
                     }
 
                 case 3:
                     {
-                        Console.WriteLine($"Date- {date} Room- {room} Давление- {signal} паскаль");
+                        Console.WriteLine($" Date- {date} Room- {room} Давление- {signal} паскаль");
                         break;
                     }
+
 
             }
         }
 
-       
+
     }
 
 
     class Program
     {
-        
-        static void Sort(List<smartHouse> array,int size)
+
+        static void Sort(List<smartHouse> array, int size)
         {
-            
-            for (int i = 0; i < size-1; i++)
+
+            for (int i = 0; i < size - 1; i++)
             {
-                for(int j = i + 1; j < size; j++)
+                for (int j = i + 1; j < size; j++)
                 {
                     int compareDate = DateTime.Compare(array[i].date, array[j].date);
-                    if(compareDate>0)
+                    if (compareDate > 0)
                     {
                         smartHouse temp = new smartHouse();
                         temp = array[i];
                         array[i] = array[j];
                         array[j] = temp;
                     }
-                    
+
                 }
             }
         }
 
         static void Update(string path, int sizeList, List<smartHouse> detectors)
         {
+            Sort(detectors, sizeList);
             StreamWriter sw = new StreamWriter(path);
-            for (int i=0; i < sizeList; i++)
+            for (int i = 0; i < sizeList; i++)
             {
                 string date = detectors[i].date.ToShortDateString();
                 string room = detectors[i].room.ToString();
@@ -85,13 +89,13 @@ namespace Lab.tesr
                 sw.WriteLine($"{date} {room} {detector} {signal}");
             }
             sw.Close();
-            Sort(detectors, sizeList);
-            
+
+
         }
         static void Delete(int lineNumber, List<smartHouse> detectors)
         {
             detectors.RemoveAt(lineNumber);
-           
+
         }
         static void Peaks(DateTime time1, DateTime time2, string room, List<smartHouse> detectors)
         {
@@ -99,15 +103,15 @@ namespace Lab.tesr
             double pressure_peak = -999999999;
             double moisture_peak = -999999999;
 
-            
+
 
             DateTime exacttime = time1;
-            for(int i=0; i< detectors.Count; i++)
+            for (int i = 0; i < detectors.Count; i++)
             {
-                
-                if(exacttime <= detectors[i].date && room == detectors[i].room)
+
+                if (exacttime <= detectors[i].date && room == detectors[i].room)
                 {
-                    while(detectors[i].date <= time2)
+                    while (detectors[i].date <= time2)
                     {
                         if (detectors[i].room == room)
                         {
@@ -140,11 +144,122 @@ namespace Lab.tesr
                     }
                 }
             }
-            if(temperature_peak== -999999999 && pressure_peak== -999999999 && moisture_peak == -999999999)
+            if (temperature_peak == -999999999 && pressure_peak == -999999999 && moisture_peak == -999999999)
                 Console.WriteLine("Нету записей датчиков о данной команте за этот промежуток времени\n");
             else
                 Console.WriteLine($"Пик по температуре - {temperature_peak},\nПик по влажности - {moisture_peak},\nПик по давлению - {pressure_peak}\n");
 
+        }
+
+        /*static int CountDays(List<smartHouse> detectors)
+        {
+            int days=1;
+            for(int i = 1; i < detectors.Count; i++)
+            {
+                if (detectors[i].date != detectors[i - 1].date)
+                    days++;
+            }
+
+            return days;
+        }*/
+        static int GetI(List<smartHouse> detectors, DateTime temp)
+        {
+            int I = 0;
+            for(int i=0;i<detectors.Count;i++)
+            {
+                if (detectors[i].date > temp)
+                    break;
+                I = i;
+            }
+            return I;
+        }
+        static int Get_i(List<smartHouse> detectors, DateTime temp)
+        {
+            int I = 0;
+            for (int i = 0; i < detectors.Count; i++)
+            {
+                if (detectors[i].date == temp)
+                    break;
+                I = i;
+            }
+            return I;
+        }
+        
+
+        static void AverageInSteps(List<smartHouse> detectors, DateTime time1, DateTime time2, string room, double step)
+        {
+            string temp = null;
+            string moisture = null;
+            string pressure = null;
+
+            DateTime currentDate = time1;
+            int i = Get_i(detectors, currentDate) + 1;
+
+
+            //int days = CountDays(detectors);
+            //int interval = days / (int)step;
+            while(currentDate <= time2)
+            {
+                DateTime tempDate = currentDate.AddDays(step-1);
+                int I = GetI(detectors, tempDate);
+                
+                double sumT = 0;
+                double sumM = 0;
+                double sumP = 0;
+                int countT = 0;
+                int countM = 0;
+                int countP = 0;
+                for (i = i ; i <= I; i++)
+                {
+                    if (detectors[i].room == room)
+                    {
+                        switch (detectors[i].detector)
+                        {
+                            case 1:
+                                {
+                                    sumT += detectors[i].signal;
+                                    countT++;
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    sumM += detectors[i].signal;
+                                    countM++;
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    sumP += detectors[i].signal;
+                                    countP++;
+                                    break;
+                                }
+                        }
+                    }
+                }
+                currentDate = currentDate.AddDays(step);
+                double avTemp = sumT / (double)countT;
+                double avMoisture = sumM / (double)countM;
+                double avPressure = sumP / (double)countP;
+
+                if(!double.IsNaN(avTemp))
+                {
+                    temp = temp + avTemp.ToString() + " ";
+                }
+                if (!double.IsNaN(avMoisture))
+                {
+                    moisture = moisture + avMoisture.ToString() + " ";
+                }
+                if (!double.IsNaN(avPressure))
+                {
+                    pressure = pressure + avPressure.ToString() + " ";
+                }
+                
+            }
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(temp + $"- Температура с {time1.ToShortDateString()} по {time2.ToShortDateString()}");
+            sb.AppendLine(moisture + $" - Влажность с {time1.ToShortDateString()} по {time2.ToShortDateString()}");
+            sb.AppendLine(pressure + $" - Давление с {time1.ToShortDateString()} по {time2.ToShortDateString()}");
+            Console.WriteLine(sb.ToString());
         }
 
         private static void printAverage(double averageTemp, double averageWet, double averagePressure, int counterT, int counterW, int counterP)
@@ -169,13 +284,13 @@ namespace Lab.tesr
             Console.WriteLine("\n");
         }
 
-        static void averageDays(List<smartHouse>detectors, int size, DateTime temp, string place )
+        static void averageDays(List<smartHouse> detectors, int size, DateTime temp, string place)
         {
             double averageTemp = 0, averageWet = 0, averagePressure = 0;
             double sumT = 0, sumW = 0, sumP = 0;
             int counterT = 0, counterW = 0, counterP = 0;
 
-            for(int i = 0; i < size; i++)
+            for (int i = 0; i < size; i++)
             {
                 if (detectors[i].date.Equals(temp) && detectors[i].room == place)
                 {
@@ -189,7 +304,7 @@ namespace Lab.tesr
                         sumW += detectors[i].signal;
                         counterW++;
                     }
-                    if(detectors[i].detector == 3)
+                    if (detectors[i].detector == 3)
                     {
                         sumP += detectors[i].signal;
                         counterP++;
@@ -242,7 +357,7 @@ namespace Lab.tesr
 
             for (int i = 0; i < size; i++)
             {
-                if ( detectors[i].date.Year.Equals(temp.Year) && detectors[i].room == place)
+                if (detectors[i].date.Year.Equals(temp.Year) && detectors[i].room == place)
                 {
                     if (detectors[i].detector == 1)
                     {
@@ -297,6 +412,7 @@ namespace Lab.tesr
                 Console.WriteLine("5- Добавление записи\n");
                 Console.WriteLine("6- Вычислить среднее за выбранный период\n");
                 Console.WriteLine("7- Вычислить пики за указанный период\n");
+                Console.WriteLine("8- Вычислить средние значения за шаг за период\n");
                 Console.WriteLine("0- Выход из меню\n"); //+
                 Console.WriteLine("\n");
                 Console.WriteLine("Введите номер операции для выполнения: ");
@@ -308,11 +424,34 @@ namespace Lab.tesr
                     case 1:
                         {
                             Console.Clear();
+                            Console.WriteLine("№ Дата      Комната      Показатель          \n");
+                            int stringCounter = 0;
                             for (int i = 0; i < sizeList; i++)
                             {
+                                Console.Write(++stringCounter);
                                 detectors[i].Print();
                             }
                             Console.WriteLine("\n");
+                            bool backMenu = true;
+                            while (backMenu)
+                            {
+                                Console.WriteLine("Введите 1, чтобы вернуться в меню");
+                                int back = int.Parse(Console.ReadLine());
+                                switch (back)
+                                {
+                                    case 1:
+                                        {
+                                            backMenu = false;
+                                            Console.Clear();
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Console.WriteLine("Вы ввели не единицу\n");
+                                            break;
+                                        }
+                                }
+                            }
                             break;
                         }
                     case 2:
@@ -327,11 +466,40 @@ namespace Lab.tesr
                                 Console.Write(temp[i] + " ");
                             }
                             Console.WriteLine("\n");
+                            bool backMenu = true;
+                            while (backMenu)
+                            {
+                                Console.WriteLine("Введите 1, чтобы вернуться в меню");
+                                int back = int.Parse(Console.ReadLine());
+                                switch (back)
+                                {
+                                    case 1:
+                                        {
+                                            backMenu = false;
+                                            Console.Clear();
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Console.WriteLine("Вы ввели не единицу\n");
+                                            break;
+                                        }
+                                }
+                            }
                             break;
                         }
                     case 3:
                         {
                             Console.Clear();
+                            Console.WriteLine("№ Дата      Комната      Показатель          \n");
+                            int stringCounter = 0;
+                            for (int i = 0; i < sizeList; i++)
+                            {
+                                Console.Write(++stringCounter);
+                                detectors[i].Print();
+                            }
+                            Console.WriteLine("\n");
+
                             Console.WriteLine("Какую строку вы хотите изменить");
                             int num = int.Parse(Console.ReadLine());
                             bool setCheck = true;
@@ -385,9 +553,28 @@ namespace Lab.tesr
                                         }
                                 }
                             }
-                            Sort(detectors, sizeList);
                             Update(path, sizeList, detectors);
                             Console.WriteLine("\nБаза данных была обновлена!\n");
+                            bool backMenu = true;
+                            while (backMenu)
+                            {
+                                Console.WriteLine("Введите 1, чтобы вернуться в меню");
+                                int back = int.Parse(Console.ReadLine());
+                                switch (back)
+                                {
+                                    case 1:
+                                        {
+                                            backMenu = false;
+                                            Console.Clear();
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Console.WriteLine("Вы ввели не единицу\n");
+                                            break;
+                                        }
+                                }
+                            }
 
                             break;
                         }
@@ -435,7 +622,7 @@ namespace Lab.tesr
                             Console.WriteLine("2- Среднее значение по месяцам\n");
                             Console.WriteLine("3- Среднее значение по годам \n");
                             Console.WriteLine("Выберите подпункт, введите нужное число\n");
-                            int checkAver=int.Parse(Console.ReadLine());
+                            int checkAver = int.Parse(Console.ReadLine());
                             switch (checkAver)
                             {
                                 case 1:
@@ -462,7 +649,7 @@ namespace Lab.tesr
                                         string place = Console.ReadLine();
                                         string dateDtring = "1." + month + "." + year;
                                         DateTime dareValue = Convert.ToDateTime(dateDtring);
-                                        averageMonth(detectors, sizeList, dareValue,place);
+                                        averageMonth(detectors, sizeList, dareValue, place);
                                         break;
                                     }
                                 case 3:
@@ -472,7 +659,7 @@ namespace Lab.tesr
                                         string year = Console.ReadLine();
                                         Console.WriteLine("Введите название комнаты\n");
                                         string place = Console.ReadLine();
-                                        string dateDtring = "1.1."+ year;
+                                        string dateDtring = "1.1." + year;
                                         DateTime dateValue = Convert.ToDateTime(dateDtring);
                                         averageYear(detectors, sizeList, dateValue, place);
                                         break;
@@ -504,8 +691,26 @@ namespace Lab.tesr
 
                             break;
                         }
-                
-                
+                    case 8:
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Введите начальную дату: ");
+                            DateTime dateTimeStart = Convert.ToDateTime(Console.ReadLine());
+                            Console.WriteLine("Введите конечную дату дату: ");
+                            DateTime dateTimeEnd = Convert.ToDateTime(Console.ReadLine());
+                            if (dateTimeStart < detectors[0].date)
+                                dateTimeStart = detectors[0].date;
+                            if (dateTimeEnd > detectors[detectors.Count - 1].date)
+                                dateTimeEnd = detectors[detectors.Count - 1].date;
+                            Console.WriteLine("Введите название комнаты(датчика): ");
+                            string exactRoom = Console.ReadLine();
+                            Console.WriteLine("Введите шаг: ");
+                            double step = double.Parse(Console.ReadLine());
+                            AverageInSteps(detectors, dateTimeStart, dateTimeEnd, exactRoom, step);
+                            break;
+                        }
+
+
 
                     case 0:
                         {
