@@ -390,9 +390,35 @@ namespace Lab.tesr
             printAverage(averageTemp, averageWet, averagePressure, counterT, counterW, counterP);
         }
 
+        static void backMenu()
+        {
+            bool backMenu = true;
+            while (backMenu)
+            {
+                Console.WriteLine("Введите 1, чтобы вернуться в меню");
+                int back = int.Parse(Console.ReadLine());
+                switch (back)
+                {
+                    case 1:
+                        {
+                            backMenu = false;
+                            Console.Clear();
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Вы ввели не единицу\n");
+                            break;
+                        }
+                }
+            }
+        }
+
         static void Main(string[] args)
         {
-            String path = @"C:\Users\HYPERPC\Desktop\smarthouse.txt";
+            string[] checkRoom = {"kitchen","bath","bedroom","living_room","dining_room"};
+            
+            String path = @"C:\Users\абв\Documents\GitHub\--Projects-for-univer\test2.txt";
             List<smartHouse> detectors = new List<smartHouse>();
             FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             int sizeList;
@@ -432,7 +458,7 @@ namespace Lab.tesr
                     case 1:
                         {
                             Console.Clear();
-                            Console.WriteLine("№ Дата      Комната      Показатель          \n");
+                            Console.WriteLine("  №       Дата              Комната     Показатель          \n");
                             int stringCounter = 0;
                             for (int i = 0; i < sizeList; i++)
                             {
@@ -440,26 +466,8 @@ namespace Lab.tesr
                                 detectors[i].Print();
                             }
                             Console.WriteLine("\n");
-                            bool backMenu = true;
-                            while (backMenu)
-                            {
-                                Console.WriteLine("Введите 1, чтобы вернуться в меню");
-                                int back = int.Parse(Console.ReadLine());
-                                switch (back)
-                                {
-                                    case 1:
-                                        {
-                                            backMenu = false;
-                                            Console.Clear();
-                                            break;
-                                        }
-                                    default:
-                                        {
-                                            Console.WriteLine("Вы ввели не единицу\n");
-                                            break;
-                                        }
-                                }
-                            }
+                            backMenu();
+                            
                             break;
                         }
                     case 2:
@@ -474,26 +482,7 @@ namespace Lab.tesr
                                 Console.Write(temp[i] + " ");
                             }
                             Console.WriteLine("\n");
-                            bool backMenu = true;
-                            while (backMenu)
-                            {
-                                Console.WriteLine("Введите 1, чтобы вернуться в меню");
-                                int back = int.Parse(Console.ReadLine());
-                                switch (back)
-                                {
-                                    case 1:
-                                        {
-                                            backMenu = false;
-                                            Console.Clear();
-                                            break;
-                                        }
-                                    default:
-                                        {
-                                            Console.WriteLine("Вы ввели не единицу\n");
-                                            break;
-                                        }
-                                }
-                            }
+                            backMenu();
                             break;
                         }
                     case 3:
@@ -529,16 +518,48 @@ namespace Lab.tesr
                                         }
                                     case 2:
                                         {
-                                            detectors[num - 1].room = Console.ReadLine();
+                                            Console.Clear();
+                                            Console.WriteLine("Введите название команты без пробелов\n");
+                                            Console.WriteLine("1-Температура, 2-Влажность, 3-Давление\n");
+                                            string consStr = Console.ReadLine();
+                                           
+                                            for(int i = 0; i < checkRoom.Length; i++)
+                                            {
+                                                if (checkRoom[i] == consStr)
+                                                {
+                                                    detectors[num - 1].room = consStr;
+                                                    Console.WriteLine("Значние было заменено");
+                                                    break;
+                                                    
+                                                }
+                                                
+                                            }
+                                            if (detectors[num - 1].room != consStr)
+                                            {
+                                                Console.WriteLine("Такой комнаты нет или вы ввели неправильно\n");
+                                            }
+
+                                           
+                                           
                                             break;
                                         }
                                     case 3:
                                         {
-                                            detectors[num - 1].detector = int.Parse(Console.ReadLine());
+                                            Console.Clear();
+                                            Console.WriteLine("Обновите назначение датчика\n");
+                                            int comand = int.Parse(Console.ReadLine());
+                                            if(comand==1 || comand == 2 || comand == 3)
+                                            {
+                                                detectors[num - 1].detector =comand;
+                                            }
+                                            else Console.WriteLine("Такой функции даткчика нет\n");
+                                           
                                             break;
                                         }
                                     case 4:
                                         {
+                                            Console.Clear();
+                                            Console.WriteLine("Обновите данные\n");
                                             detectors[num - 1].signal = double.Parse(Console.ReadLine());
                                             break;
                                         }
@@ -608,11 +629,26 @@ namespace Lab.tesr
 
                             Console.WriteLine("Добавление данных с клавиатуры. Введите параметры");
                             Console.WriteLine("Введите дату в формате (ShortDate)");
-                            DateTime dateTime = Convert.ToDateTime(Console.ReadLine());
+                            string dateString = Console.ReadLine();
+                            DateTime dateTime = Convert.ToDateTime(dateString);
                             Console.WriteLine("Введите название команиты (без пробела)");
-                            string place = Console.ReadLine();
+                            String placeT = Console.ReadLine();
+                            string place = placeT;
                             Console.WriteLine("Введите тип датчика: 1-температуры, 2- влажность, 3- давление ");
-                            int detNum = int.Parse(Console.ReadLine());
+                            int comand = int.Parse(Console.ReadLine());
+                            object comandint = comand;
+                            int detNum;
+                            if(comandint is int && (comand == 1 || comand == 2 || comand == 3))
+                            {
+                                 detNum = comand;
+                               
+                            }
+                            else
+                            {
+                                Console.WriteLine("Вы введи назначение датчика некоректно\n");
+                            }
+                           
+                           
                             Console.WriteLine("Установите числовое значение вычисления");
                             double sigDet = double.Parse(Console.ReadLine());
                             detectors.Add(new smartHouse(dateTime, place, detNum, sigDet));
@@ -620,7 +656,7 @@ namespace Lab.tesr
                             Sort(detectors, sizeList);
                             Update(path, sizeList, detectors);
                             Console.WriteLine("\nБаза данных была обновлена!\n");
-
+                            backMenu();
                             break;
                         }
                     case 6:
@@ -679,7 +715,7 @@ namespace Lab.tesr
                                     }
                             }
 
-
+                            backMenu();
                             break;
                         }
                     case 7:
@@ -696,7 +732,7 @@ namespace Lab.tesr
                             Peaks(dateTimeStart, dateTimeEnd, exactRoom, detectors);
 
 
-
+                            backMenu();
                             break;
                         }
                     case 8:
@@ -715,6 +751,7 @@ namespace Lab.tesr
                             Console.WriteLine("Введите шаг: ");
                             double step = double.Parse(Console.ReadLine());
                             AverageInSteps(detectors, dateTimeStart, dateTimeEnd, exactRoom, step);
+                            backMenu();
                             break;
                         }
 

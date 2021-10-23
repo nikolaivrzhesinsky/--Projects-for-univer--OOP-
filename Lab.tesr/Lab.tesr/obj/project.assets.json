@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\HYPERPC\\.nuget\\packages\\": {}
+    "C:\\Users\\абв\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\Lab.tesr\\Lab.tesr\\Lab.tesr.csproj",
+      "projectUniqueName": "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\Lab.tesr\\Lab.tesr\\Lab.tesr.csproj",
       "projectName": "Lab.tesr",
-      "projectPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\Lab.tesr\\Lab.tesr\\Lab.tesr.csproj",
-      "packagesPath": "C:\\Users\\HYPERPC\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\Lab.tesr\\Lab.tesr\\obj\\",
+      "projectPath": "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\Lab.tesr\\Lab.tesr\\Lab.tesr.csproj",
+      "packagesPath": "C:\\Users\\абв\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\Lab.tesr\\Lab.tesr\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\HYPERPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\абв\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }
