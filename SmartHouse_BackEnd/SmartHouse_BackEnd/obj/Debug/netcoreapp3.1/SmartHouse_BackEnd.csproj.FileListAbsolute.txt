@@ -1,0 +1,10 @@
+C:\Users\HYPERPC\source\repos\SmartHouse_BackEnd\SmartHouse_BackEnd\bin\Debug\netcoreapp3.1\SmartHouse_BackEnd.deps.json
+C:\Users\HYPERPC\source\repos\SmartHouse_BackEnd\SmartHouse_BackEnd\bin\Debug\netcoreapp3.1\SmartHouse_BackEnd.dll
+C:\Users\HYPERPC\source\repos\SmartHouse_BackEnd\SmartHouse_BackEnd\bin\Debug\netcoreapp3.1\SmartHouse_BackEnd.pdb
+C:\Users\HYPERPC\source\repos\SmartHouse_BackEnd\SmartHouse_BackEnd\obj\Debug\netcoreapp3.1\SmartHouse_BackEnd.csproj.AssemblyReference.cache
+C:\Users\HYPERPC\source\repos\SmartHouse_BackEnd\SmartHouse_BackEnd\obj\Debug\netcoreapp3.1\SmartHouse_BackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HYPERPC\source\repos\SmartHouse_BackEnd\SmartHouse_BackEnd\obj\Debug\netcoreapp3.1\SmartHouse_BackEnd.AssemblyInfoInputs.cache
+C:\Users\HYPERPC\source\repos\SmartHouse_BackEnd\SmartHouse_BackEnd\obj\Debug\netcoreapp3.1\SmartHouse_BackEnd.AssemblyInfo.cs
+C:\Users\HYPERPC\source\repos\SmartHouse_BackEnd\SmartHouse_BackEnd\obj\Debug\netcoreapp3.1\SmartHouse_BackEnd.csproj.CoreCompileInputs.cache
+C:\Users\HYPERPC\source\repos\SmartHouse_BackEnd\SmartHouse_BackEnd\obj\Debug\netcoreapp3.1\SmartHouse_BackEnd.dll
+C:\Users\HYPERPC\source\repos\SmartHouse_BackEnd\SmartHouse_BackEnd\obj\Debug\netcoreapp3.1\SmartHouse_BackEnd.pdb
