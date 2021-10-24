@@ -9,11 +9,11 @@ namespace SmartHouse2
     class BuisnessLogic
     {
         DataBase dataBase = new DataBase();
-        string path = @"C:\Users\HYPERPC\Desktop\smarthouse.txt";
+        
         public void DataCreation()
         {
             
-            FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            FileStream fs = new FileStream(dataBase.path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             using (StreamReader sr = new StreamReader(fs))
             {
                 while (!sr.EndOfStream)
@@ -47,7 +47,7 @@ namespace SmartHouse2
         {
             
             SortList();
-            StreamWriter sw = new StreamWriter(path);
+            StreamWriter sw = new StreamWriter(dataBase.path);
             for (int i = 0; i < dataBase.detectors.Count; i++)
             {
                 string date = dataBase.detectors[i].date.ToShortDateString();
