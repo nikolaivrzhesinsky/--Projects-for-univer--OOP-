@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\SmartHouse2.csproj": {}
+    "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouse2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\SmartHouse2.csproj": {
+    "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouse2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\SmartHouse2.csproj",
+        "projectUniqueName": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouse2.csproj",
         "projectName": "SmartHouse2",
-        "projectPath": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\SmartHouse2.csproj",
+        "projectPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouse2.csproj",
         "packagesPath": "C:\\Users\\HYPERPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\obj\\",
+        "outputPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HYPERPC\\AppData\\Roaming\\NuGet\\NuGet.Config",

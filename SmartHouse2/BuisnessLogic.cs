@@ -9,9 +9,10 @@ namespace SmartHouse2
     class BuisnessLogic
     {
         DataBase dataBase = new DataBase();
+        string path = @"C:\Users\HYPERPC\Desktop\smarthouse.txt";
         public void DataCreation()
         {
-            string path = @"C:\Users\HYPERPC\Desktop\smarthouse.txt";
+            
             FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             using (StreamReader sr = new StreamReader(fs))
             {
@@ -44,7 +45,7 @@ namespace SmartHouse2
         }
         public void Update()
         {
-            string path = @"C:\Users\HYPERPC\Desktop\smarthouse.txt";
+            
             SortList();
             StreamWriter sw = new StreamWriter(path);
             for (int i = 0; i < dataBase.detectors.Count; i++)
