@@ -15,6 +15,7 @@ namespace SmartHouse2
         public double signal { get; set; } // показатель, который имеет датчик
 
         public List<DataBase> detectors = new List<DataBase>();
+        public string path = @"C:\Users\HYPERPC\Desktop\smarthouse.txt";
 
         public DataBase() { }
         public DataBase(DateTime date, string room, int detector, double signal)
