@@ -1,0 +1,9 @@
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLibrary\bin\Debug\netstandard2.0\SmartHouseLibrary.deps.json
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLibrary\bin\Debug\netstandard2.0\SmartHouseLibrary.dll
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLibrary\bin\Debug\netstandard2.0\SmartHouseLibrary.pdb
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.csprojAssemblyReference.cache
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.AssemblyInfoInputs.cache
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.AssemblyInfo.cs
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.csproj.CoreCompileInputs.cache
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.dll
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.pdb
