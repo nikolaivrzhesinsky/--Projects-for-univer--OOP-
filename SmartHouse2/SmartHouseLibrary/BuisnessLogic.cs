@@ -415,26 +415,26 @@ namespace SmartHouseLibrary
                 dates = dates + $"{currentDate.ToShortDateString()}-{tempDate.ToShortDateString()}|";
                 if (!double.IsNaN(avTemp))
                 {
-                    temp = temp + avTemp.ToString() + "\t" + "\t" + "\t"+"-Температура";
+                    temp = temp + avTemp.ToString() + "\t" + "\t" + "\t";
 
                 }
                 if (!double.IsNaN(avMoisture))
                 {
-                    moisture = moisture + avMoisture.ToString() + "\t" + "\t" + "\t"+"-Влажность";
+                    moisture = moisture + avMoisture.ToString() + "\t" + "\t" + "\t";
 
                 }
                 if (!double.IsNaN(avPressure))
                 {
-                    pressure = pressure + avPressure.ToString() + "\t" + "\t" + "\t"+"-Давление";
+                    pressure = pressure + avPressure.ToString() + "\t" + "\t" + "\t";
 
                 }
                 currentDate = currentDate.AddDays(step);
 
             }
             sb.AppendLine(dates);
-            sb.AppendLine(temp);
-            sb.AppendLine(moisture);
-            sb.AppendLine(pressure);
+            sb.AppendLine(temp+"-Температура");
+            sb.AppendLine(moisture+"-Влажность");
+            sb.AppendLine(pressure+"-Давление");
             return sb.ToString();
         }
     }
