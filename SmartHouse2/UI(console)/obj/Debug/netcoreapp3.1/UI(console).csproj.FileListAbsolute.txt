@@ -1,0 +1,16 @@
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\bin\Debug\netcoreapp3.1\UI(console).exe
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\bin\Debug\netcoreapp3.1\UI(console).deps.json
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\bin\Debug\netcoreapp3.1\UI(console).runtimeconfig.json
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\bin\Debug\netcoreapp3.1\UI(console).runtimeconfig.dev.json
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\bin\Debug\netcoreapp3.1\UI(console).dll
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\bin\Debug\netcoreapp3.1\UI(console).pdb
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\bin\Debug\netcoreapp3.1\SmartHouseLibrary.dll
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\bin\Debug\netcoreapp3.1\SmartHouseLibrary.pdb
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\obj\Debug\netcoreapp3.1\UI(console).csprojAssemblyReference.cache
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\obj\Debug\netcoreapp3.1\UI(console).AssemblyInfoInputs.cache
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\obj\Debug\netcoreapp3.1\UI(console).AssemblyInfo.cs
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\obj\Debug\netcoreapp3.1\UI(console).csproj.CoreCompileInputs.cache
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\obj\Debug\netcoreapp3.1\UI(console).csproj.CopyComplete
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\obj\Debug\netcoreapp3.1\UI(console).dll
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\obj\Debug\netcoreapp3.1\UI(console).pdb
+C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\UI(console)\obj\Debug\netcoreapp3.1\UI(console).genruntimeconfig.cache
