@@ -11,7 +11,7 @@ namespace Lab.tesr
         public DateTime date { get; set; }  //дата замера
         public string room { get; set; }   // комната
         public int detector { get; set; }  // определяет назначение датчика
-        public double signal { get; set; } // показатель, который имеет датчик
+        public double signal { get; set; } // показатель, который имеет  модуль датчика
 
         public smartHouse() { }
         public smartHouse(DateTime date, string room, int detector, double signal)
@@ -30,18 +30,18 @@ namespace Lab.tesr
                 case 1:
                     {
 
-                        Console.WriteLine($" Date- {date} Room- {room} Темпаратура- {signal} градусов");
+                        Console.WriteLine($" Date- {date.ToShortDateString()} Room- {room} Темпаратура- {signal} градусов");
                         break;
                     }
                 case 2:
                     {
-                        Console.WriteLine($" Date- {date} Room- {room} Влажность- {signal}%");
+                        Console.WriteLine($" Date- {date.ToShortDateString()} Room- {room} Влажность- {signal}%");
                         break;
                     }
 
                 case 3:
                     {
-                        Console.WriteLine($" Date- {date} Room- {room} Давление- {signal} паскаль");
+                        Console.WriteLine($" Date- {date.ToShortDateString()} Room- {room} Давление- {signal} паскаль");
                         break;
                     }
 
@@ -144,10 +144,24 @@ namespace Lab.tesr
                     }
                 }
             }
-            if (temperature_peak == -999999999 && pressure_peak == -999999999 && moisture_peak == -999999999)
+            /*if (temperature_peak == -999999999 && pressure_peak == -999999999 && moisture_peak == -999999999)
                 Console.WriteLine("Нету записей датчиков о данной команте за этот промежуток времени\n");
             else
-                Console.WriteLine($"Пик по температуре - {temperature_peak},\nПик по влажности - {moisture_peak},\nПик по давлению - {pressure_peak}\n");
+                Console.WriteLine($"Пик по температуре - {temperature_peak},\nПик по влажности - {moisture_peak},\nПик по давлению - {pressure_peak}\n");*/
+            StringBuilder sb = new StringBuilder();
+            if (temperature_peak == -999999999)
+                Console.WriteLine("Нету записей датчиков по температуре о данной команте за этот промежуток времени\n");
+            else
+                sb.AppendLine($"Пик по температуре: {temperature_peak}");
+            if (moisture_peak == -999999999)
+                Console.WriteLine("Нету записей датчиков по влажности о данной команте за этот промежуток времени\n");
+            else
+                sb.AppendLine($"Пик по влажности: {moisture_peak}");
+            if (pressure_peak == -999999999)
+                Console.WriteLine("Нету записей датчиков по давлению о данной команте за этот промежуток времени\n");
+            else
+                sb.AppendLine($"Пик по давлению: {pressure_peak}");
+            Console.WriteLine(sb.ToString());
 
         }
 
@@ -418,7 +432,7 @@ namespace Lab.tesr
         {
             string[] checkRoom = {"kitchen","bath","bedroom","living_room","dining_room"};
             
-            String path = @"C:\Users\абв\Documents\GitHub\--Projects-for-univer\test2.txt";
+            String path = @"C:\Users\абв\Documents\GitHub\--Projects-for-univer\test3.txt";
             List<smartHouse> detectors = new List<smartHouse>();
             FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             int sizeList;
@@ -513,6 +527,7 @@ namespace Lab.tesr
                                 {
                                     case 1:
                                         {
+                                            Console.WriteLine("Введите дату в формате dd.mm.yyyy \n");
                                             detectors[num - 1].date = Convert.ToDateTime(Console.ReadLine());
                                             break;
                                         }
@@ -520,7 +535,7 @@ namespace Lab.tesr
                                         {
                                             Console.Clear();
                                             Console.WriteLine("Введите название команты без пробелов\n");
-                                            Console.WriteLine("1-Температура, 2-Влажность, 3-Давление\n");
+                                          
                                             string consStr = Console.ReadLine();
                                            
                                             for(int i = 0; i < checkRoom.Length; i++)
@@ -546,6 +561,7 @@ namespace Lab.tesr
                                     case 3:
                                         {
                                             Console.Clear();
+                                            Console.WriteLine("1-Температура, 2-Влажность, 3-Давление\n");
                                             Console.WriteLine("Обновите назначение датчика\n");
                                             int comand = int.Parse(Console.ReadLine());
                                             if(comand==1 || comand == 2 || comand == 3)
@@ -637,7 +653,7 @@ namespace Lab.tesr
                             Console.WriteLine("Введите тип датчика: 1-температуры, 2- влажность, 3- давление ");
                             int comand = int.Parse(Console.ReadLine());
                             object comandint = comand;
-                            int detNum;
+                            int detNum=0;
                             if(comandint is int && (comand == 1 || comand == 2 || comand == 3))
                             {
                                  detNum = comand;
@@ -646,6 +662,7 @@ namespace Lab.tesr
                             else
                             {
                                 Console.WriteLine("Вы введи назначение датчика некоректно\n");
+                                break;
                             }
                            
                            
@@ -760,6 +777,7 @@ namespace Lab.tesr
                     case 0:
                         {
                             Console.Clear();
+
                             Console.WriteLine("Вы действительно хотите выйти?\n");
                             Console.WriteLine("1-yes, 0-no");
                             int signal = int.Parse(Console.ReadLine());
