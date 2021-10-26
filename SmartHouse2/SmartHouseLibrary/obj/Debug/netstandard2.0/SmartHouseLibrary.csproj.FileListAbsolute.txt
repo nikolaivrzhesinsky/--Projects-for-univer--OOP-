@@ -7,3 +7,13 @@ C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLib
 C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.csproj.CoreCompileInputs.cache
 C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.dll
 C:\Users\абв\Documents\GitHub\--Projects-for-univer\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.pdb
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\SmartHouseLibrary\bin\Debug\netstandard2.0\SmartHouseLibrary.deps.json
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\SmartHouseLibrary\bin\Debug\netstandard2.0\SmartHouseLibrary.dll
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\SmartHouseLibrary\bin\Debug\netstandard2.0\SmartHouseLibrary.pdb
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.csproj.AssemblyReference.cache
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.AssemblyInfoInputs.cache
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.AssemblyInfo.cs
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.csproj.CoreCompileInputs.cache
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.dll
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\SmartHouseLibrary\obj\Debug\netstandard2.0\SmartHouseLibrary.pdb

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5Dl0mRiLiLF9U5AdUk/sVbjpX3UxmXJ1yp6MCOxaJ/lPUPOuJekLcbQnTlwrZC4GtvD5m2KuVunAoN6fTz6Cbw==",
+  "dgSpecHash": "TgRSbNNglqjGwPIv3+AfBK9Me3rKPVSEEAcSBrt9ehmLeTbTMAbMhtqXIfP89JbVtNejtCQL+vbZMibnUbSlSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj",
+  "projectFilePath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\HYPERPC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\HYPERPC\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
