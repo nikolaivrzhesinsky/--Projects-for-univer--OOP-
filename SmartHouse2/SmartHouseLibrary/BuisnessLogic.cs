@@ -124,6 +124,7 @@ namespace SmartHouseLibrary
         public void Delete(int lineNumber)
         {
             dataBase.detectors.RemoveAt(lineNumber - 1);
+            Update();
 
         }
         public void Add(string date, string room, int detector, int signal)
@@ -252,6 +253,9 @@ namespace SmartHouseLibrary
             averageTemp = sumT / counterT;
             averageWet = sumW / counterW;
             averagePressure = sumP / counterP;
+            sb.AppendLine("Среденее по температуре: " + averageTemp.ToString());
+            sb.AppendLine("Среднее по влажности: " + averageWet.ToString());
+            sb.AppendLine("Среднее по давлению: " + averagePressure.ToString());
             return sb.ToString();
         }
 

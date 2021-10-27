@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\UI(Forms)\\UI(Forms).csproj": {}
+    "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\UI(Forms)\\UI(Forms).csproj": {}
   },
   "projects": {
-    "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj": {
+    "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj",
+        "projectUniqueName": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj",
         "projectName": "SmartHouseLibrary",
-        "projectPath": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj",
+        "projectPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj",
         "packagesPath": "C:\\Users\\HYPERPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\SmartHouseLibrary\\obj\\",
+        "outputPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouseLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HYPERPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,14 +61,14 @@
         }
       }
     },
-    "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\UI(Forms)\\UI(Forms).csproj": {
+    "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\UI(Forms)\\UI(Forms).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\UI(Forms)\\UI(Forms).csproj",
+        "projectUniqueName": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\UI(Forms)\\UI(Forms).csproj",
         "projectName": "UI(Forms)",
-        "projectPath": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\UI(Forms)\\UI(Forms).csproj",
+        "projectPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\UI(Forms)\\UI(Forms).csproj",
         "packagesPath": "C:\\Users\\HYPERPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\UI(Forms)\\obj\\",
+        "outputPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\UI(Forms)\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HYPERPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -85,8 +85,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj": {
-                "projectPath": "C:\\Users\\HYPERPC\\source\\repos\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj"
+              "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj": {
+                "projectPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj"
               }
             }
           }

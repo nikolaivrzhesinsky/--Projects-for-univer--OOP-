@@ -19,3 +19,30 @@ C:\Users\HYPERPC\source\repos\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(F
 C:\Users\HYPERPC\source\repos\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(Forms).pdb
 C:\Users\HYPERPC\source\repos\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(Forms).genruntimeconfig.cache
 C:\Users\HYPERPC\source\repos\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI_Forms_.PrintLineForm.resources
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\bin\Debug\netcoreapp3.1\UI(Forms).exe
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\bin\Debug\netcoreapp3.1\UI(Forms).deps.json
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\bin\Debug\netcoreapp3.1\UI(Forms).runtimeconfig.json
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\bin\Debug\netcoreapp3.1\UI(Forms).runtimeconfig.dev.json
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\bin\Debug\netcoreapp3.1\UI(Forms).dll
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\bin\Debug\netcoreapp3.1\UI(Forms).pdb
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\bin\Debug\netcoreapp3.1\SmartHouseLibrary.dll
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\bin\Debug\netcoreapp3.1\SmartHouseLibrary.pdb
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(Forms).csproj.AssemblyReference.cache
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI_Forms_.DeleteForm.resources
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI_Forms_.Form1.resources
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI_Forms_.PrintLineForm.resources
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI_Forms_.Properties.Resources.resources
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(Forms).csproj.GenerateResource.cache
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(Forms).GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(Forms).AssemblyInfoInputs.cache
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(Forms).AssemblyInfo.cs
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(Forms).csproj.CoreCompileInputs.cache
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(Forms).csproj.CopyComplete
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(Forms).dll
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(Forms).pdb
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI(Forms).genruntimeconfig.cache
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI_Forms_.AddForm.resources
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI_Forms_.ChangeForm.resources
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI_Forms_.AverageForm.resources
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI_Forms_.PeakForm.resources
+D:\GitHub Repos\--Projects-for-univer--OOP-\SmartHouse2\UI(Forms)\obj\Debug\netcoreapp3.1\UI_Forms_.StepForm.resources
