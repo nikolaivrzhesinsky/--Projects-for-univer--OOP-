@@ -36,8 +36,13 @@ namespace UI_Forms_
 
         private void PrintBox_TextChanged(object sender, EventArgs e)
         {
-            PrintBox.ScrollBars = ScrollBars.Vertical;
+            PrintBox.ScrollBars = ScrollBars.Both;
+            PrintBox.Multiline = true;
+            PrintBox.WordWrap = false;
+           
             
+            //PrintBox.ScrollBars = ScrollBars.Both;
+
         }
 
         private void PrintLine_Click(object sender, EventArgs e)
@@ -90,5 +95,7 @@ namespace UI_Forms_
             StepForm sf = new StepForm();
             sf.Show(this);
         }
+
+        
     }
 }

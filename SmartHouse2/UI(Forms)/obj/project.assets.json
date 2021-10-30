@@ -27,19 +27,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HYPERPC\\.nuget\\packages\\": {}
+    "C:\\Users\\абв\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\UI(Forms)\\UI(Forms).csproj",
+      "projectUniqueName": "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\SmartHouse2\\UI(Forms)\\UI(Forms).csproj",
       "projectName": "UI(Forms)",
-      "projectPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\UI(Forms)\\UI(Forms).csproj",
-      "packagesPath": "C:\\Users\\HYPERPC\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\UI(Forms)\\obj\\",
+      "projectPath": "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\SmartHouse2\\UI(Forms)\\UI(Forms).csproj",
+      "packagesPath": "C:\\Users\\абв\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\SmartHouse2\\UI(Forms)\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\HYPERPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\абв\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +57,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj": {
-              "projectPath": "D:\\GitHub Repos\\--Projects-for-univer--OOP-\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj"
+            "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj": {
+              "projectPath": "C:\\Users\\абв\\Documents\\GitHub\\--Projects-for-univer\\SmartHouse2\\SmartHouseLibrary\\SmartHouseLibrary.csproj"
             }
           }
         }
@@ -86,7 +90,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

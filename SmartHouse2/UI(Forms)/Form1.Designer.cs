@@ -48,18 +48,18 @@ namespace UI_Forms_
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(14, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 34);
+            this.label1.Size = new System.Drawing.Size(197, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "DetectorWatch";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::UI_Forms_.Properties.Resources._1814102_eye_sight_view_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(190, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(217, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 34);
+            this.pictureBox1.Size = new System.Drawing.Size(41, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -68,9 +68,9 @@ namespace UI_Forms_
             // 
             this.exit.Cursor = System.Windows.Forms.Cursors.Default;
             this.exit.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.exit.Location = new System.Drawing.Point(596, 9);
+            this.exit.Location = new System.Drawing.Point(681, 12);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(27, 36);
+            this.exit.Size = new System.Drawing.Size(31, 48);
             this.exit.TabIndex = 2;
             this.exit.Text = "x";
             this.exit.Click += new System.EventHandler(this.exit_Click);
@@ -79,9 +79,10 @@ namespace UI_Forms_
             // 
             this.Print.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Print.ForeColor = System.Drawing.Color.Black;
-            this.Print.Location = new System.Drawing.Point(12, 66);
+            this.Print.Location = new System.Drawing.Point(14, 88);
+            this.Print.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Print.Name = "Print";
-            this.Print.Size = new System.Drawing.Size(289, 31);
+            this.Print.Size = new System.Drawing.Size(330, 41);
             this.Print.TabIndex = 3;
             this.Print.Text = "Вывод БД на экран";
             this.Print.UseVisualStyleBackColor = true;
@@ -89,10 +90,11 @@ namespace UI_Forms_
             // 
             // PrintBox
             // 
-            this.PrintBox.Location = new System.Drawing.Point(307, 66);
+            this.PrintBox.Location = new System.Drawing.Point(351, 88);
+            this.PrintBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PrintBox.Multiline = true;
             this.PrintBox.Name = "PrintBox";
-            this.PrintBox.Size = new System.Drawing.Size(316, 392);
+            this.PrintBox.Size = new System.Drawing.Size(361, 521);
             this.PrintBox.TabIndex = 4;
             this.PrintBox.TextChanged += new System.EventHandler(this.PrintBox_TextChanged);
             // 
@@ -100,9 +102,10 @@ namespace UI_Forms_
             // 
             this.PrintLine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PrintLine.ForeColor = System.Drawing.Color.Black;
-            this.PrintLine.Location = new System.Drawing.Point(11, 112);
+            this.PrintLine.Location = new System.Drawing.Point(13, 149);
+            this.PrintLine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PrintLine.Name = "PrintLine";
-            this.PrintLine.Size = new System.Drawing.Size(289, 31);
+            this.PrintLine.Size = new System.Drawing.Size(330, 41);
             this.PrintLine.TabIndex = 5;
             this.PrintLine.Text = "Вывод строчки";
             this.PrintLine.UseVisualStyleBackColor = true;
@@ -112,9 +115,10 @@ namespace UI_Forms_
             // 
             this.DeleteButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DeleteButton.ForeColor = System.Drawing.Color.Black;
-            this.DeleteButton.Location = new System.Drawing.Point(12, 164);
+            this.DeleteButton.Location = new System.Drawing.Point(14, 219);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(289, 30);
+            this.DeleteButton.Size = new System.Drawing.Size(330, 40);
             this.DeleteButton.TabIndex = 6;
             this.DeleteButton.Text = "Удалить элемент";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -124,9 +128,10 @@ namespace UI_Forms_
             // 
             this.Add_button.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Add_button.ForeColor = System.Drawing.Color.Black;
-            this.Add_button.Location = new System.Drawing.Point(13, 218);
+            this.Add_button.Location = new System.Drawing.Point(15, 291);
+            this.Add_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Add_button.Name = "Add_button";
-            this.Add_button.Size = new System.Drawing.Size(289, 30);
+            this.Add_button.Size = new System.Drawing.Size(330, 40);
             this.Add_button.TabIndex = 7;
             this.Add_button.Text = "Добавить элемент";
             this.Add_button.UseVisualStyleBackColor = true;
@@ -136,9 +141,10 @@ namespace UI_Forms_
             // 
             this.ChangeButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ChangeButton.ForeColor = System.Drawing.Color.Black;
-            this.ChangeButton.Location = new System.Drawing.Point(12, 270);
+            this.ChangeButton.Location = new System.Drawing.Point(14, 360);
+            this.ChangeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(288, 30);
+            this.ChangeButton.Size = new System.Drawing.Size(329, 40);
             this.ChangeButton.TabIndex = 8;
             this.ChangeButton.Text = "Редактировать элемент";
             this.ChangeButton.UseVisualStyleBackColor = true;
@@ -148,9 +154,10 @@ namespace UI_Forms_
             // 
             this.AverageButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AverageButton.ForeColor = System.Drawing.Color.Black;
-            this.AverageButton.Location = new System.Drawing.Point(13, 316);
+            this.AverageButton.Location = new System.Drawing.Point(15, 421);
+            this.AverageButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AverageButton.Name = "AverageButton";
-            this.AverageButton.Size = new System.Drawing.Size(288, 30);
+            this.AverageButton.Size = new System.Drawing.Size(329, 40);
             this.AverageButton.TabIndex = 9;
             this.AverageButton.Text = "Вычислить среднее за период";
             this.AverageButton.UseVisualStyleBackColor = true;
@@ -160,9 +167,10 @@ namespace UI_Forms_
             // 
             this.PeakButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PeakButton.ForeColor = System.Drawing.Color.Black;
-            this.PeakButton.Location = new System.Drawing.Point(14, 367);
+            this.PeakButton.Location = new System.Drawing.Point(16, 489);
+            this.PeakButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PeakButton.Name = "PeakButton";
-            this.PeakButton.Size = new System.Drawing.Size(288, 34);
+            this.PeakButton.Size = new System.Drawing.Size(329, 45);
             this.PeakButton.TabIndex = 10;
             this.PeakButton.Text = "Пики за указанный период";
             this.PeakButton.UseVisualStyleBackColor = true;
@@ -172,9 +180,10 @@ namespace UI_Forms_
             // 
             this.AvInSteps.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AvInSteps.ForeColor = System.Drawing.Color.Black;
-            this.AvInSteps.Location = new System.Drawing.Point(13, 424);
+            this.AvInSteps.Location = new System.Drawing.Point(15, 565);
+            this.AvInSteps.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AvInSteps.Name = "AvInSteps";
-            this.AvInSteps.Size = new System.Drawing.Size(288, 34);
+            this.AvInSteps.Size = new System.Drawing.Size(329, 45);
             this.AvInSteps.TabIndex = 11;
             this.AvInSteps.Text = "Пики за период с шагом";
             this.AvInSteps.UseVisualStyleBackColor = true;
@@ -182,9 +191,9 @@ namespace UI_Forms_
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 477);
+            this.ClientSize = new System.Drawing.Size(728, 636);
             this.Controls.Add(this.AvInSteps);
             this.Controls.Add(this.PeakButton);
             this.Controls.Add(this.AverageButton);
@@ -199,6 +208,7 @@ namespace UI_Forms_
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.Red;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

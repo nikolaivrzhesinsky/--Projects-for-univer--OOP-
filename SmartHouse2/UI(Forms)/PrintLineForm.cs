@@ -25,5 +25,10 @@ namespace UI_Forms_
             F1.PrintBox.Text = F1.bl.PrintLine(x);
             this.Close();
         }
+
+        private void LineNumberBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

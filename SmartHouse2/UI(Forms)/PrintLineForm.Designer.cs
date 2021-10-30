@@ -37,24 +37,27 @@ namespace UI_Forms_
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(15, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 23);
+            this.label1.Size = new System.Drawing.Size(262, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Введите номер строчки";
             // 
             // LineNumberBox
             // 
-            this.LineNumberBox.Location = new System.Drawing.Point(13, 56);
+            this.LineNumberBox.Location = new System.Drawing.Point(15, 75);
+            this.LineNumberBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LineNumberBox.Name = "LineNumberBox";
-            this.LineNumberBox.Size = new System.Drawing.Size(212, 23);
+            this.LineNumberBox.Size = new System.Drawing.Size(242, 27);
             this.LineNumberBox.TabIndex = 1;
+            this.LineNumberBox.TextChanged += new System.EventHandler(this.LineNumberBox_TextChanged);
             // 
             // ok_button
             // 
-            this.ok_button.Location = new System.Drawing.Point(246, 56);
+            this.ok_button.Location = new System.Drawing.Point(281, 75);
+            this.ok_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ok_button.Name = "ok_button";
-            this.ok_button.Size = new System.Drawing.Size(54, 23);
+            this.ok_button.Size = new System.Drawing.Size(62, 31);
             this.ok_button.TabIndex = 2;
             this.ok_button.Text = "OK";
             this.ok_button.UseVisualStyleBackColor = true;
@@ -62,12 +65,13 @@ namespace UI_Forms_
             // 
             // PrintLineForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 98);
+            this.ClientSize = new System.Drawing.Size(357, 131);
             this.Controls.Add(this.ok_button);
             this.Controls.Add(this.LineNumberBox);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "PrintLineForm";
             this.Text = "PrintLineForm";
             this.ResumeLayout(false);
