@@ -41,14 +41,16 @@ namespace UI_Forms_
             this.AverageButton = new System.Windows.Forms.Button();
             this.PeakButton = new System.Windows.Forms.Button();
             this.AvInSteps = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(14, 12);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(10, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 45);
             this.label1.TabIndex = 0;
@@ -56,27 +58,30 @@ namespace UI_Forms_
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(217, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(211, 6);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // exit
             // 
-            this.exit.Cursor = System.Windows.Forms.Cursors.Default;
+            this.exit.Cursor = System.Windows.Forms.Cursors.No;
             this.exit.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.exit.Location = new System.Drawing.Point(681, 12);
+            this.exit.ForeColor = System.Drawing.Color.White;
+            this.exit.Location = new System.Drawing.Point(669, -3);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(31, 48);
+            this.exit.Size = new System.Drawing.Size(31, 41);
             this.exit.TabIndex = 2;
             this.exit.Text = "x";
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // Print
             // 
+            this.Print.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Print.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Print.ForeColor = System.Drawing.Color.Black;
             this.Print.Location = new System.Drawing.Point(14, 88);
@@ -100,6 +105,7 @@ namespace UI_Forms_
             // 
             // PrintLine
             // 
+            this.PrintLine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PrintLine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PrintLine.ForeColor = System.Drawing.Color.Black;
             this.PrintLine.Location = new System.Drawing.Point(13, 149);
@@ -113,6 +119,7 @@ namespace UI_Forms_
             // 
             // DeleteButton
             // 
+            this.DeleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DeleteButton.ForeColor = System.Drawing.Color.Black;
             this.DeleteButton.Location = new System.Drawing.Point(14, 219);
@@ -126,6 +133,7 @@ namespace UI_Forms_
             // 
             // Add_button
             // 
+            this.Add_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Add_button.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Add_button.ForeColor = System.Drawing.Color.Black;
             this.Add_button.Location = new System.Drawing.Point(15, 291);
@@ -139,6 +147,7 @@ namespace UI_Forms_
             // 
             // ChangeButton
             // 
+            this.ChangeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ChangeButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ChangeButton.ForeColor = System.Drawing.Color.Black;
             this.ChangeButton.Location = new System.Drawing.Point(14, 360);
@@ -152,6 +161,7 @@ namespace UI_Forms_
             // 
             // AverageButton
             // 
+            this.AverageButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AverageButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AverageButton.ForeColor = System.Drawing.Color.Black;
             this.AverageButton.Location = new System.Drawing.Point(15, 421);
@@ -165,6 +175,7 @@ namespace UI_Forms_
             // 
             // PeakButton
             // 
+            this.PeakButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PeakButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PeakButton.ForeColor = System.Drawing.Color.Black;
             this.PeakButton.Location = new System.Drawing.Point(16, 489);
@@ -178,6 +189,7 @@ namespace UI_Forms_
             // 
             // AvInSteps
             // 
+            this.AvInSteps.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AvInSteps.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AvInSteps.ForeColor = System.Drawing.Color.Black;
             this.AvInSteps.Location = new System.Drawing.Point(15, 565);
@@ -189,11 +201,24 @@ namespace UI_Forms_
             this.AvInSteps.UseVisualStyleBackColor = true;
             this.AvInSteps.Click += new System.EventHandler(this.AvInSteps_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.exit);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(700, 57);
+            this.panel1.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 636);
+            this.BackColor = System.Drawing.Color.Indigo;
+            this.ClientSize = new System.Drawing.Size(722, 638);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.AvInSteps);
             this.Controls.Add(this.PeakButton);
             this.Controls.Add(this.AverageButton);
@@ -203,15 +228,15 @@ namespace UI_Forms_
             this.Controls.Add(this.PrintLine);
             this.Controls.Add(this.PrintBox);
             this.Controls.Add(this.Print);
-            this.Controls.Add(this.exit);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ForeColor = System.Drawing.Color.Red;
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,6 +256,7 @@ namespace UI_Forms_
         private System.Windows.Forms.Button AverageButton;
         private System.Windows.Forms.Button PeakButton;
         private System.Windows.Forms.Button AvInSteps;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

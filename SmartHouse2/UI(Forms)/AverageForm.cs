@@ -45,5 +45,10 @@ namespace UI_Forms_
             F1.PrintBox.Text = F1.bl.AverageDays(date, room);
             this.Close();
         }
+
+        private void AverageForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
